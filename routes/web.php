@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 //Controladores namespces
-use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ProductoController; // Siempre agrega el nombre del controllador!!!
 
 /*
 |--------------------------------------------------------------------------

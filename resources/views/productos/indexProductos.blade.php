@@ -10,7 +10,7 @@
         <tr>
             <th>Nombre</th>
             <th>Marca</th>
-            <th>Descripcion limite</th>
+            <th>Descripcion</th>
             <th>Categoria</th>
             <th>Precio</th>
         </tr>
