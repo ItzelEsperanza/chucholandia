@@ -9,7 +9,6 @@
 
 <form action="{{route('productos.store')}}" method="POST">
     @csrf
-
     <lable>
     Nombre:
     <br>
