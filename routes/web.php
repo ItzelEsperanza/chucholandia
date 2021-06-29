@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('productos',[ProductoController::class,'index']);
+Route::get('productos',[ProductoController::class,'index']); //indexProductos.blade.php
+Route::get('productos/create',[ProductoController::class,'create'])->name('productos.create'); //creteProductos.blade.php
+Route::post('productos',[ProductoController::class,'store'])->name('productos.store'); // No tiene view
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
