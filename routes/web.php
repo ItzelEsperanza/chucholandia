@@ -24,11 +24,13 @@ Route::get('/', function () {
 });
 
 //Productos
-Route::get('productos',[ProductoController::class,'index']); //indexProductos.blade.php
+Route::get('productos',[ProductoController::class,'index'])->name('productos.index'); //indexProductos.blade.php
 Route::get('productos/create',[ProductoController::class,'create'])->name('productos.create'); //creteProductos.blade.php
 Route::get('productos/{id}',[ProductoController::class,'show'])->name('productos.show'); //showProductos.blade.php
+Route::get('productos/{id}/edit',[ProductoController::class,'edit'])->name('productos.edit'); //editProductos.blade.php
 Route::post('productos',[ProductoController::class,'store'])->name('productos.store'); // No tiene view
-
+Route::put('productos/{id}',[ProductoController::class,'update'])->name('productos.update'); // No tiene view
+Route::delete('productos/{id}',[ProductoController::class,'destroy'])->name('productos.destroy'); // Se incluye en showProductos.blade.php
 
 //Clientes
 Route::get('clientes/create',[ClienteController::class,'create'])->name('clientes.create'); //creteClientes.blade.php

@@ -82,6 +82,9 @@ class ProductoController extends Controller
     public function edit($id)
     {
         //
+        $productos=Producto::find($id);
+
+        return view('productos.editProductos',compact('productos'));
     }
 
     /**
@@ -94,6 +97,18 @@ class ProductoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $productos=Producto::find($id);
+
+         $productos->nombre=$request->input('nombre');
+         $productos->marca=$request->input('marca');
+         $productos->descripcion=$request->input('descripcion');
+         $productos->categoria=$request->input('categoria');
+         $productos->precio=$request->input('precio');
+
+         $productos->save();
+
+         return redirect()->route('productos.show',$productos->id);
+
     }
 
     /**
@@ -105,5 +120,9 @@ class ProductoController extends Controller
     public function destroy($id)
     {
         //
+        $productos=Producto::find($id);
+         $productos->delete();
+
+         return redirect()->route('productos.index');
     }
 }
