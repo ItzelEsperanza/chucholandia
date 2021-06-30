@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClienteMascotaServicioTable extends Migration
+class CreateCitasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateClienteMascotaServicioTable extends Migration
      */
     public function up()
     {
-        Schema::create('cliente_mascota_servicio', function (Blueprint $table) {
+        Schema::create('citas', function (Blueprint $table) {
             $table->id();
-
             $table->dateTime('fecha_hora');
         
 
@@ -52,6 +51,6 @@ class CreateClienteMascotaServicioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cliente_mascota_servicio');
+        Schema::dropIfExists('citas');
     }
 }
