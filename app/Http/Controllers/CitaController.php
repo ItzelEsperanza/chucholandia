@@ -36,7 +36,14 @@ class CitaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Retorna al fomrulario para no enviar formulario vacio
+        $request->validate([
+        'cliente_id'=>'required',
+        'mascota_id'=>'required',
+        'fecha_hora'=>'required',
+        'servicio_id'=>'required',
+       ]);
+
         $citas= new Cita;
          $citas->cliente_id = $request->cliente_id;
          $citas->mascota_id = $request->mascota_id;

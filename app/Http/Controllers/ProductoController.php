@@ -37,6 +37,15 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+           'nombre'=>'required',
+           'marca'=>'required',
+           'descripcion'=>'required',
+           'categoria'=>'required',
+           'precio'=>'required',
+           ]);
+
          $productos= new Producto();
          $productos->nombre=$request->input('nombre');
          $productos->marca=$request->input('marca');
@@ -45,6 +54,8 @@ class ProductoController extends Controller
          $productos->precio=$request->input('precio');
 
          $productos->save();
+
+         return redirect()->route('productos.show',$productos->id);
     }
 
     /**
@@ -56,6 +67,10 @@ class ProductoController extends Controller
     public function show($id)
     {
         //
+        $productos=Producto::find($id);
+
+        return view('productos.showProductos',compact('productos'));
+
     }
 
     /**

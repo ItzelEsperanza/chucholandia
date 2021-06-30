@@ -20,7 +20,7 @@
     <tr>
 
     <td>
-    <a href="/productos/{{$prod->nombre}}">
+    <a href="{{route('productos.show',$prod->id)}}">
        {{ $prod -> nombre }}
     </a>
     </td>

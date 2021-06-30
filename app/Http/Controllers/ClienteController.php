@@ -36,6 +36,13 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+    //Retorna al fomrulario para no enviar formulario vacio
+        $request->validate([
+       'nombre'=>'required',
+       'apellido'=>'required',
+        'telefono'=>'required',
+        'email'=>'required',
+       ]);
         //
         $clientes = new Cliente();
         $clientes->nombre=$request->input('nombre');

@@ -12,36 +12,71 @@
     <lable>
     Nombre:
     <br>
-    <input type="text" name="nombre">
+    <input type="text" name="nombre" value="{{old('nombre')}}">
     </lable>
+
+    
+        @error('nombre')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
     <br>
     <lable>
     Edad:
      <br>
-    <input type="number" name="edad">
+    <input type="number" name="edad" value="{{old('edad')}}">
     </lable>
+
+    
+        @error('edad')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
     Tipo animal:
      <br>
-    <input type="text" name="tipo_animal">
+    <input type="text" name="tipo_animal" value="{{old('tipo_animal')}}">
     </lable><br>
+
+    
+        @error('tipo_animal')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
     Raza:
      <br>
-   <input type="text" name="raza">
+   <input type="text" name="raza" value="{{old('raza')}}">
     </lable><br>
+
+    
+        @error('raza')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
     Ingrese su id de cliente:
      <br>
-   <input type="number" name="cliente_id">
+   <input type="number" name="cliente_id" value="{{old('cliente_id')}}">
     </lable><br>
+
+    
+        @error('cliente_id')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
     <button type="submit">Agendar una cita</button>
 

@@ -26,7 +26,9 @@ Route::get('/', function () {
 //Productos
 Route::get('productos',[ProductoController::class,'index']); //indexProductos.blade.php
 Route::get('productos/create',[ProductoController::class,'create'])->name('productos.create'); //creteProductos.blade.php
+Route::get('productos/{id}',[ProductoController::class,'show'])->name('productos.show'); //showProductos.blade.php
 Route::post('productos',[ProductoController::class,'store'])->name('productos.store'); // No tiene view
+
 
 //Clientes
 Route::get('clientes/create',[ClienteController::class,'create'])->name('clientes.create'); //creteClientes.blade.php

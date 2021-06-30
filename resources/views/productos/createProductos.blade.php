@@ -12,37 +12,67 @@
     <lable>
     Nombre:
     <br>
-    <input type="text" name="nombre">
+    <input type="text" name="nombre" value="{{old('nombre')}}">
     </lable>
+
+        @error('nombre')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
     <br>
     <lable>
     Marca:
      <br>
-    <input type="text" name="marca">
+    <input type="text" name="marca" value="{{old('marca')}}">
     </lable>
+
+         @error('marca')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
     Descripcion:
      <br>
-    <textarea name="descripcion" rows='5'> </textarea>
+    <textarea name="descripcion" rows='5'> {{old('descripcion')}} </textarea>
     </lable><br>
+
+        @error('descripcion')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
     Categoria:
      <br>
-   <input type="text" name="categoria">
+   <input type="text" name="categoria" value="{{old('categoria')}}">
     </lable><br>
+
+        @error('categoria')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
      <br>
     <lable>
 
     Precio:
      <br>
-     <input type="number" name="precio">
+     <input type="number" name="precio" value="{{old('cliente_id')}}">
     </lable><br>
+
+        @error('precio')
+            <br>
+            <small>*{{$message}}</small>
+            <br>
+            @enderror
 
 
 

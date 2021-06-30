@@ -39,6 +39,14 @@ class MascotaController extends Controller
     public function store(Request $request)
     {
         //
+         $request->validate([
+       'nombre'=>'required',
+       'edad'=>'required',
+       'tipo_animal'=>'required',
+       'raza'=>'required',
+       'cliente_id'=>'required',
+       ]);
+
         $mascotas=new Mascota;
         $mascotas->nombre=$request->nombre;
         $mascotas->edad=$request->edad;
