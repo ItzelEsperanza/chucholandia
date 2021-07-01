@@ -23,9 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
 Route::get('inicio', function () {
     return view('inicio');
 });
+*/
 
 //Productos
 Route::get('productos',[ProductoController::class,'index'])->name('productos.index'); //indexProductos.blade.php
