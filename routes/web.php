@@ -49,10 +49,8 @@ Route::post('mascotas',[MascotaController::class,'store'])->name('mascotas.store
 
 //Citas
 Route::get('citas/create',[CitaController::class,'create'])->name('citas.create'); //creteClientes.blade.php
+Route::get('citas/check',[CitaController::class,'check'])->name('citas.check'); //creteClientes.blade.php
 Route::post('citas',[CitaController::class,'store'])->name('citas.store'); // No tiene view
-Route::get('citas/check', function () {
-    return view('welcome');
-});
 
 
 //Servicios

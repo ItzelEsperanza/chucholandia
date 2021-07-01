@@ -36,21 +36,29 @@ class CitaController extends Controller
      */
     public function store(Request $request)
     {
+
         //Retorna al fomrulario para no enviar formulario vacio
         $request->validate([
+        'fecha_hora'=>'required',
         'cliente_id'=>'required',
         'mascota_id'=>'required',
-        'fecha_hora'=>'required',
-        'servicio_id'=>'required',
+        'servicio'=>'required',
        ]);
 
         $citas= new Cita;
+         $citas->fecha_hora =  $request->fecha_hora;
          $citas->cliente_id = $request->cliente_id;
          $citas->mascota_id = $request->mascota_id;
-         $citas->fecha_hora =  $request->fecha_hora;
          $citas->servicio_id = $request->servicio;
 
          $citas->save();
+
+         return redirect()->route('citas.check');
+    }
+
+    public function check()
+    {
+        return view('citas.checkCitas');
     }
 
     /**
