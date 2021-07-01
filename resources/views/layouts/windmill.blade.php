@@ -62,7 +62,7 @@
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path>
                 </svg>
-                <span class="ml-4">Dashboard</span>
+                <span class="ml-4">Inicio</span>
               </a>
             </li>
           </ul>
@@ -70,7 +70,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="../forms.html"
+                href="{{route('productos.index')}}"
               >
                 <svg
                   class="w-5 h-5"
@@ -86,13 +86,13 @@
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                   ></path>
                 </svg>
-                <span class="ml-4">Forms</span>
+          <span class="ml-4">Productos</span>   
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="../cards.html"
+                href="{{route('servicios.index')}}"
               >
                 <svg
                   class="w-5 h-5"
@@ -108,11 +108,13 @@
                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   ></path>
                 </svg>
-                <span class="ml-4">Cards</span>
+                <span class="ml-4">Servicios</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <a
+
+            <!-- Seccion CHARTS -->
+          {{--    <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="../charts.html"
               >
@@ -135,6 +137,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+            --}}
+
+            <!-- Seccion BUTTONS-->
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="../buttons.html"
@@ -157,7 +162,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <a
+            
+            <!-- Seccion MODALS-->
+            {{--  <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="../modals.html"
               >
@@ -179,6 +186,9 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
+            --}}
+
+            <!-- Seccion TABLES//CONTACTO-->
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="../tables.html"
@@ -195,11 +205,13 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                 </svg>
-                <span class="ml-4">Tables</span>
+                <span class="ml-4">Contacto</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <button
+
+            <!-- SECCION Pages-->
+            {{--  <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 @click="togglePagesMenu"
                 aria-haspopup="true"
@@ -248,6 +260,7 @@
                   <li
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   >
+               
                     <a class="w-full" href="./login.html">Login</a>
                   </li>
                   <li
@@ -278,11 +291,14 @@
               </template>
             </li>
           </ul>
+         --}}
+
+          <!-- SECCION Create account//Agendar cita-->
           <div class="px-6 my-6">
             <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
-              Create account
+              Agendar cita
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
           </div>
