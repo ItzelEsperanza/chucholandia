@@ -303,6 +303,20 @@
               </a>
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
+
+             <!--Botton register-->
+             @guest
+             <br>
+             <button 
+              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            >
+            <a href="{{route('register')}}">
+              Registrate como usuario
+              </a>
+              <span class="ml-2" aria-hidden="true">+</span>
+            </button>
+            @endguest
+
           </div>
         </div>
       </aside>
@@ -621,8 +635,22 @@
               </svg>
             </button>
 
+            
+
              <!-- Search input -->
        @include('layouts.searchbar')
+
+        <!-- Ingresar button -->
+       @guest
+             <button 
+             class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            >
+            <a href="{{route('login')}}">
+              Ingresar 
+              </a>
+              <span class="ml-1" aria-hidden="true"></span>
+            </button>
+            @endguest
        
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
