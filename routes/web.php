@@ -41,10 +41,12 @@ Route::delete('productos/{id}',[ProductoController::class,'destroy'])->name('pro
 
 //Clientes
 Route::get('clientes/create',[ClienteController::class,'create'])->name('clientes.create'); //creteClientes.blade.php
+Route::get('clientes/{id}',[ClienteController::class,'show'])->name('clientes.show'); //showClientes.blade.php
 Route::post('clientes',[ClienteController::class,'store'])->name('clientes.store'); // No tiene view
 
 //Mascotas
 Route::get('mascotas/create',[MascotaController::class,'create'])->name('mascotas.create'); //creteMascotas.blade.php
+Route::get('mascotas/{id}',[MascotaController::class,'show'])->name('mascotas.show'); //showMascotas.blade.php
 Route::post('mascotas',[MascotaController::class,'store'])->name('mascotas.store'); // No tiene view
 
 //Citas

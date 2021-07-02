@@ -59,7 +59,7 @@ class MascotaController extends Controller
        //$mascotas->cliente()->attach($id);
         $mascotas->save();
          
-         return redirect()->route('citas.create');
+         return redirect()->route('mascotas.show',$mascotas->id);
 
 
     }
@@ -72,7 +72,9 @@ class MascotaController extends Controller
      */
     public function show($id)
     {
-        //
+        $mascotas= Mascota::find($id);
+
+        return view('mascotas.showMascotas',compact('mascotas'));
     }
 
     /**

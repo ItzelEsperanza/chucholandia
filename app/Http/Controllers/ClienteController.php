@@ -51,7 +51,7 @@ class ClienteController extends Controller
         $clientes->email=$request->input('email');
 
         $clientes->save();
-        return redirect()->route('mascotas.create');//quitar tal vez
+        return redirect()->route('clientes.show',$clientes->id);//quitar tal vez
     }
 
     /**
@@ -62,7 +62,9 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //
+       $clientes= Cliente::find($id);
+
+        return view('clientes.showClientes',compact('clientes'));
     }
 
     /**

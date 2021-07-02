@@ -16,8 +16,7 @@
     </lable>
 
         @error('nombre')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -29,8 +28,7 @@
     </lable>
 
          @error('marca')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -42,8 +40,7 @@
     </lable><br>
 
         @error('descripcion')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -55,8 +52,7 @@
     </lable><br>
 
         @error('categoria')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -69,8 +65,7 @@
     </lable><br>
 
         @error('precio')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 

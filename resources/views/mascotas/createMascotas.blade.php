@@ -21,8 +21,7 @@
 
     
         @error('nombre')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -37,8 +36,7 @@
 
     
         @error('edad')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -49,12 +47,11 @@
      <br>
     <input type="text" name="tipo_animal" value="{{old('tipo_animal')}}"
     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
-    </lable><br>
+    </lable>
 
     
         @error('tipo_animal')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -65,12 +62,11 @@
      <br>
    <input type="text" name="raza" value="{{old('raza')}}"
    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
-    </lable><br>
+    </lable>
 
     
         @error('raza')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
@@ -81,15 +77,15 @@
      <br>
    <input type="number" name="cliente_id" value="{{old('cliente_id')}}"
    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input">
-    </lable><br>
+    </lable>
 
     
         @error('cliente_id')
-            <br>
-            <small>*{{$message}}</small>
+            <small class="text-xs text-red-600 dark:text-red-400">*{{$message}}</small>
             <br>
             @enderror
 
+    <br>
     <button type="submit"
     class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
     Agendar una cita</button>
