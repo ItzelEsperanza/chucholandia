@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\File; //AGREGAR NAMESPACE DEL MODELO A UTILIZAR
 
+use Illuminate\Support\Facades\Storage;
+
 class FileController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class FileController extends Controller
      */
     public function index()
     {
-        //
+       return view('files.indexFiles');
     }
 
     /**
@@ -40,10 +42,18 @@ class FileController extends Controller
     'file' => 'required|image'
     ]);
 
-    return $request->all();
-        //
+    $imagenes = $request->file('file')->store('public/imagenes');
+    $url=Storage::url($imagenes);
         //$files= new File();
        // $files->url = $request->url;
+     
+
+       File::create([
+       'url'=>$url
+       ]);
+
+
+       return redirect()->route('files.index');
     }
 
     /**

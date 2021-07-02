@@ -64,6 +64,7 @@ Route::post('citas',[CitaController::class,'store'])->name('citas.store'); // No
 Route::get('servicios',[ServicioController::class,'index'])->name('servicios.index'); //indexServicios.blade.php
 
 //Files
+Route::get('files',[FileController::class,'index'])->name('files.index'); //indexServicios.blade.php
 Route::get('files/create',[FileController::class,'create'])->name('files.create'); //indexServicios.blade.php
 Route::get('files/show',[FileController::class,'show'])->name('files.show'); //showServicios.blade.php
 Route::post('files',[FileController::class,'store'])->name('files.store'); // No tiene view
