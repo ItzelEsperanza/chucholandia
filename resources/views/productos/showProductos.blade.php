@@ -9,7 +9,7 @@
 
     <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
 
-<h1>Producto: {{$productos->nombre}}</h1> <br>
+<p><strong>Producto: </strong>{{$productos->nombre}}</p> <br>
 <p><strong>Marca: </strong>{{$productos->marca}}</p> <br>
 <p><strong>Descripcion: </strong>{{$productos->descripcion}}</p> <br>
 <p><strong>Categoria: </strong>{{$productos->categoria}}</p><br>

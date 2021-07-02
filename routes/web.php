@@ -20,9 +20,10 @@ use App\Http\Controllers\ServicioController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
 
 /*
 Route::get('inicio', function () {
@@ -43,6 +44,10 @@ Route::delete('productos/{id}',[ProductoController::class,'destroy'])->name('pro
 Route::get('clientes/create',[ClienteController::class,'create'])->name('clientes.create'); //creteClientes.blade.php
 Route::get('clientes/{id}',[ClienteController::class,'show'])->name('clientes.show'); //showClientes.blade.php
 Route::post('clientes',[ClienteController::class,'store'])->name('clientes.store'); // No tiene view
+
+//Contacto
+Route::get('contacto',[ClienteController::class,'contacto'])->name('clientes.contacto'); //contacto.blade.php
+Route::get('/',[ClienteController::class,'welcome'])->name('clientes.welcome'); //contacto.blade.php
 
 //Mascotas
 Route::get('mascotas/create',[MascotaController::class,'create'])->name('mascotas.create'); //creteMascotas.blade.php

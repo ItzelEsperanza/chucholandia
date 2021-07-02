@@ -2,7 +2,7 @@
 @section('contenido')
 
 <!-- Principio-->
-<h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+<h4 class="mb-4 text-lg font-semibold text-green-600 dark:text-green-300">
              Editar producto </h4>
 <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
 

@@ -67,6 +67,17 @@ class ClienteController extends Controller
         return view('clientes.showClientes',compact('clientes'));
     }
 
+
+    public function contacto()
+    {
+        return view('clientes.contacto');
+    }
+
+    public function welcome()
+    {
+        return view('clientes.welcome');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
