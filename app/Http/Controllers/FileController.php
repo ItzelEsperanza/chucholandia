@@ -16,7 +16,8 @@ class FileController extends Controller
      */
     public function index()
     {
-       return view('files.indexFiles');
+        $files= File::all();
+       return view('files.indexFiles',compact('files'));
     }
 
     /**
