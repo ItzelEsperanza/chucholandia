@@ -9,6 +9,7 @@ use App\Http\Controllers\MascotaController;
 use App\Http\Controllers\CitaController;
 use App\Http\Controllers\ClienteMascotaServicioController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,9 +60,14 @@ Route::get('citas/create',[CitaController::class,'create'])->name('citas.create'
 Route::get('citas/check',[CitaController::class,'check'])->name('citas.check'); //creteClientes.blade.php
 Route::post('citas',[CitaController::class,'store'])->name('citas.store'); // No tiene view
 
-
 //Servicios
 Route::get('servicios',[ServicioController::class,'index'])->name('servicios.index'); //indexServicios.blade.php
+
+//Files
+Route::get('files/create',[FileController::class,'create'])->name('files.create'); //indexServicios.blade.php
+Route::get('files/show',[FileController::class,'show'])->name('files.show'); //showServicios.blade.php
+Route::post('files',[FileController::class,'store'])->name('files.store'); // No tiene view
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
